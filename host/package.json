@@ -1,0 +1,25 @@
+{
+  "name": "@fe-monorepo-bazel/host",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5000 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 5000 --strictPort",
+    "build:bazel": "bazel build build",
+    "serve": "serve ../bazel-bin/host/dist -p 5000"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@bazel/ibazel": "0.16.2",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^3.0.0",
+    "@originjs/vite-plugin-federation": "^1.3.3",
+    "vite": "^4.0.5"
+  }
+}
